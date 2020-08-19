@@ -2,24 +2,116 @@
 
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Welcome to my website</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <title>Welcome to my website bro</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-        <strong>Hello my friend.</strong> <br>
-        <em>I am italicised.</em> <br>
-        Here is a link to <a href="https://www.google.com">Google</a>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>            
-        </ul>
-        <script src="" async defer></script>
+        <!-- Navigation Menu -->
+        <nav>
+            <div class="menu">
+                <h1 class="bigname">Jason Sun</h1>
+                <ul class="nav_links"> 
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">My Skills</a></li>
+                    <li><a href="#career">My Career</a></li>
+                    <li><a href="#blog">My Blog</a></li>
+                    <li><a href="#contact">Find Me</a></li>
+                </ul>
+                <i class="material-icons">menu</i>
+            </div>
+            <div class="dropdown">
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+            </div>
+        </nav>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class ="section__title section__title--intro">
+                Hi, my name is <strong>Jason Sun</strong>.
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Mechanical Engineer, Business Consultant, Anything if I Put My Heart to It</p>
+            <img src="img/js_headshot.jpg" alt="Jason Sun headshot">
+        </section>
+        
+        <!-- What I do -->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">What I Do</h2>
+            <div class="abouts">
+
+                <div class="service">
+                    <h3>Engineering Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Business Analytics</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Financial Modeling</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="my-career" id="career">
+            <h2 class="section__title section__title--career">Where I've Been</h2>
+            <p class="section__title section__title--career"></p>
+            
+            <div class="about-me__body">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+
+            </div>
+
+            <!-- Add some photos here of internships and work photos-->
+        </section>
+        
+        <section class="my-skills" id=skills></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!--  Work Grid of Blog Post -->
+        <div id="Container">
+            <!--  -->
+
+                    <a href="#" class="blog-entry" style="display: inline-block;" data-bound="">
+                    <div class="portitem port1 blog1">
+                        <div class="itemtitle black">
+                            <div class="itemhed">
+                                
+                            </div>
+                            <div class="readme">
+                                Read More
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+				
+
     </body>
 </html>
+

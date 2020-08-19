@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke
+}
+
+li, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
+
+}
+
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+    padding-left: 30px;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+.bigname {
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    margin-right: auto;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease-in-out 0s;
+}
+.nav_links li a:hover {
+    color: white;
+    background-color: grey;
+
+}
+
+.material-icons {
+    margin-left: 30px; 
+    cursor: pointer;
+}
+
+/*button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+
+}
