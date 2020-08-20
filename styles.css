@@ -1,21 +1,87 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Roboto:wght@300&display=swap');
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+/* Custom properties*/
+:root {
+    --ff-primary: 'Cormorant Garamond', serif;
+    --ff-secondary: 'Roboto', sans-serif;
 
-body {
-    background-color: whitesmoke
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: whitesmoke;
+    --clr-dark: #363636;
+    --clr-accent: #72f8fd;
+    --clr-highlight: grey;
+    --fs-h1: 2.75rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.5rem;
+    --fs-p: 0.75rem;
+    --fs-body: 1rem;
+    --fs-logo: 1.5rem;
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.125em 0.125em 0.25em rgba(0,0,0,0.15);
 }
 
+    /*for increasing font sizes on different devices*/
+@media (min-width: 800px) { 
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.75rem;
+        --fs-p: 1rem;
+        --fs-body: 1.125rem;
+        --fs-logo: 2.5rem;    
+    }
+}
+
+/* General Styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 6em 2em
+}
+
+/*Header font formatting*/
+h1, h2, h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+p {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-p);
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+strong {font-weight: var(--fw-bold);}
+
 li, a {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-family: var(--ff-secondary);
+    font-weight: 300;
     font-size: 16px;
-    color: grey;
+    color: var(--clr-highlight);
     text-decoration: none;
 
 }
@@ -32,10 +98,11 @@ li, a {
     background-color: white;
 }
 
+/*in lieu of logo, change to actual png when available*/
 .bigname {
     cursor: pointer;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 45px;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-logo);
     margin-right: auto;
 }
 
@@ -61,6 +128,113 @@ li, a {
     margin-left: 30px; 
     cursor: pointer;
 }
+
+/*Section Title Styling*/
+.section__title {
+    margin-bottom: 0.25rem;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
+
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    padding:.25em 1em;
+    margin-bottom: 1em;
+}
+
+/*Intro Section*/
+
+.intro {
+    position: relative;
+    margin: auto;
+}
+
+.intro__img{
+    box-shadow: var(--bs);
+}
+.section__subtitle--intro {
+    display:inline-block;
+}
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 300px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: 1/3;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5rem;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/*About Me Section*/
+.about-me {
+    background-color: var(--clr-dark);
+    background-image: url(../img/sparks.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--about {
+    color: var(--clr-light);
+    position: relative;
+}
+
+.section__title--about::after {
+    content: '';
+    display:block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+    .abouts {
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-column-gap: 2em;
+        grid-template-areas:
+            "title1 title2 title3"
+            "p1 p2 p3";
+    }
 
 /*button {
     padding: 9px 25px;
