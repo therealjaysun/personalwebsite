@@ -121,12 +121,16 @@ li, a {
 .nav_links li a:hover {
     color: white;
     background-color: grey;
-
 }
 
 .material-icons {
     margin-left: 30px; 
     cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.material-icons:hover {
+    transform: scale(1.25);
 }
 
 /*Section Title Styling*/
@@ -168,8 +172,23 @@ li, a {
     box-shadow: var(--bs);
 }
 .section__subtitle--intro {
-    display:inline-block;
+    display: inline-block;
+    grid-template-areas: "l r";
+    overflow: hidden;
+
+
 }
+
+.section__subtitle--intro p:nth-child(1) {
+    float:right;
+
+}
+
+.section__subtitle--intro p:nth-child(2) {
+    float:right;
+
+}
+
 @media (min-width: 600px) {
     .intro {
         display: grid;
@@ -225,16 +244,106 @@ li, a {
     opacity: 0.5;
 }
 
+
 @media (min-width: 600px) {
+    #skill1 {
+        grid-area: title1;
+    }
+    
+    #skill2 {
+        grid-area: title2;
+    }
+    
+    #skill3 {
+        grid-area: title3;
+    }
+    
+    #sd1 {
+        grid-area: p1;
+    }
+    
+    #sd2 {
+        grid-area: p2;
+    }
+    
+    #sd3 {
+        grid-area: p3;
+    }
+
     .abouts {
         display: grid;
-        width: 80%;
+        width: 90%;
+        max-width: 1000px;
         margin: auto;
+        grid-row-gap: 1em;
         grid-column-gap: 2em;
         grid-template-areas:
-            "title1 title2 title3"
-            "p1 p2 p3";
+        "title1 title2 title3"
+        "p1 p2 p3"
+    
     }
+}
+
+/*My Career Section*/
+
+.my-career {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;
+    box-sizing: border-box;
+/*    display: grid;
+    grid-template-rows: 
+    edu work1 work2 work3 work4 future;*/
+}
+
+.section__title--career {
+    color: var(--clr-dark);
+    position: relative;
+}
+
+.section__title--career::after {
+    content: '';
+    display:block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.5;
+}
+
+.tab {
+    visibility: collapse;
+    height: min-content;
+}
+
+@media (min-width: 600px) {
+    .tab {
+        grid-area: tab;
+        visibility: visible;
+    }
+
+    .tabcontent {
+        grid-area: content;
+    }
+
+    .my-career {
+        display: grid;
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        grid-template-areas: 
+        "tab"
+        "content";
+
+    }
+}
+
+
+
+
+
+
+
 
 /*button {
     padding: 9px 25px;

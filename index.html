@@ -2,11 +2,14 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Welcome to my website bro</title>
+        <title>Jason Sun - Get To Know Me</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
+        <meta name="viewport" content="width=device-width">
+        <script src="main.js">
+        </script>
         <!-- Navigation Menu -->
         <nav>
             <div class="menu">
@@ -28,7 +31,12 @@
             <h1 class ="section__title section__title--intro">
                 Hi, my name is <strong>Jason Sun.</strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Mechanical Engineer</p>
+            <div class="section__subtitle section__subtitle--intro">
+                <p id="cursor">|</p>
+                <p id="job-titles"></p>
+            </div>
+
+
             <img src="img/js_headshot.jpg" alt="Jason Sun headshot" class="intro__img">
         </section>
         
@@ -37,36 +45,95 @@
             <h2 class="section__title section__title--about">What I Do</h2>
             <div class="abouts">
 
-                <div class="service">
-                    <h3>Engineering Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
-                </div>
 
-                <div class="service">
-                    <h3>Business Analytics</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
-                </div>
+                <h3 class="skill" id="skill1">Engineering Design</h3>
+                <p class="skill-description" id="sd1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
 
-                <div class="service">
-                    <h3>Financial Modeling</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
-                </div>
+
+
+                <h3 class="skill" id="skill2">Business Analytics</h3>
+                <p class="skill-description" id="sd2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+
+
+
+                <h3 class="skill" id="skill3">Financial Modeling</h3>
+                <p class="skill-description" id="sd3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+
 
             </div>
         </section>
 
+        <!-- Where I've Been-->
         <section class="my-career" id="career">
             <h2 class="section__title section__title--career">Where I've Been</h2>
             <p class="section__subtitle section__subtitle--career"></p>
-            
-            <div class="about-me__body">
+            <div class = "scrolling-tab">
+                <div class="tab"> <!-- Tab buttons -->
+                    <button class="tablinks" onclick="openWork(event,'Northwestern')">Northwestern University</button>
+                    <button class="tablinks" onclick="openWork(event,'BAIC')">BAIC</button>
+                    <button class="tablinks" onclick="openWork(event,'FCA')">FCA</button>
+                    <button class="tablinks" onclick="openWork(event,'Tesla')">Tesla</button>
+                    <button class="tablinks" onclick="openWork(event,'Deloitte')">Deloitte</button>
+                    <button class="tablinks" onclick="openWork(event,'Future')">Future Thoughts</button>
+                </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+                <div id="Northwestern" class="tabcontent">
+                    <h3>Northwestern University</h3>
+                    <p>B.S. in Mechanical Engineering & Economics</p>
+                    <p>September 2015 - June 2019</p>       
+                    <ul class="work-bullets">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul> 
+                </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur nisl felis, non euismod odio accumsan sed. Nunc volutpat nisl eget ipsum convallis vestibulum. Aenean consequat ac sem sed facilisis. Aliquam ac consectetur sem. Vivamus commodo tortor id nunc consectetur, a ullamcorper lectus vehicula. Fusce laoreet ligula quis vulputate convallis. Suspendisse potenti. Morbi pellentesque porta mauris, in semper purus varius non.</p>
+                <div class="BAIC">
+                    <h3>BAIC Group</h3>
+                    <p></p>
+                    <p></p>
+                    <ul class="work-bullets">
 
+                    </ul>
+                </div>
+
+                <div class="FCA">
+                    <h3>FCA Fiat Chrysler Automobiles</h3>
+                    <p></p>
+                    <p></p>
+                    <ul class="work-bullets">
+
+                    </ul>
+                </div>
+
+                <div class="Tesla">
+                    <h3>Tesla</h3>
+                    <p></p>
+                    <p></p>
+                    <ul class="work-bullets">
+
+                    </ul>
+                </div>
+
+                <div class="Deloitte">
+                    <h3>Deloitte Consulting</h3>
+                    <p></p>
+                    <p></p>
+                    <ul class="work-bullets">
+
+                    </ul>
+                </div>
+
+                <div class="Future">
+                    <h3>Thoughts on My Future</h3>
+                    <p></p>
+                    <p></p>
+                    <ul class="work-bullets">
+
+                    </ul>
+                </div>
             </div>
-
             <!-- Add some photos here of internships and work photos-->
         </section>
 
@@ -82,6 +149,7 @@
                     <img src="#" alt="Skill 1" style="width:100%">
                     <h4>Skill 1</h4>
                     <p>Lorem ipsum dolor..</p>
+            
                     </div>
                 </div>
 
