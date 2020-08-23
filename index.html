@@ -32,7 +32,7 @@
                 Hi, my name is <strong>Jason Sun.</strong>
             </h1>
             <div class="section__subtitle section__subtitle--intro">
-                <p id="cursor">|</p>
+                <p id="cursor"><strong>|</strong></p>
                 <p id="job-titles"></p>
             </div>
 
@@ -68,16 +68,16 @@
             <h2 class="section__title section__title--career">Where I've Been</h2>
             <p class="section__subtitle section__subtitle--career"></p>
             <div class = "scrolling-tab">
-                <div class="tab"> <!-- Tab buttons -->
-                    <button class="tablinks" onclick="openWork(event,'Northwestern')">Northwestern University</button>
-                    <button class="tablinks" onclick="openWork(event,'BAIC')">BAIC</button>
-                    <button class="tablinks" onclick="openWork(event,'FCA')">FCA</button>
-                    <button class="tablinks" onclick="openWork(event,'Tesla')">Tesla</button>
-                    <button class="tablinks" onclick="openWork(event,'Deloitte')">Deloitte</button>
-                    <button class="tablinks" onclick="openWork(event,'Future')">Future Thoughts</button>
-                </div>
+               
+                <button class="tab" id="tablink1" onclick="changeTabs(event,'Northwestern')">Northwestern University</button>
+                <button class="tab" id="tablink2" onclick="changeTabs(event,'BAIC')">BAIC</button>
+                <button class="tab" id="tablink3" onclick="changeTabs(event,'FCA')">FCA</button>
+                <button class="tab" id="tablink4" onclick="changeTabs(event,'Tesla')">Tesla</button>
+                <button class="tab" id="tablink5" onclick="changeTabs(event,'Deloitte')">Deloitte</button>
+                <button class="tab" id="tablink6" onclick="changeTabs(event,'Future')">Future Thoughts</button>
 
-                <div id="Northwestern" class="tabcontent">
+
+                <div class="tabcontent" id="Northwestern">
                     <h3>Northwestern University</h3>
                     <p>B.S. in Mechanical Engineering & Economics</p>
                     <p>September 2015 - June 2019</p>       
@@ -89,7 +89,7 @@
                     </ul> 
                 </div>
 
-                <div class="BAIC">
+                <div class="tabcontent" id="BAIC">
                     <h3>BAIC Group</h3>
                     <p></p>
                     <p></p>
@@ -98,8 +98,8 @@
                     </ul>
                 </div>
 
-                <div class="FCA">
-                    <h3>FCA Fiat Chrysler Automobiles</h3>
+                <div class="tabcontent" id="FCA">
+                    <h3>Fiat Chrysler Automobiles</h3>
                     <p></p>
                     <p></p>
                     <ul class="work-bullets">
@@ -107,7 +107,7 @@
                     </ul>
                 </div>
 
-                <div class="Tesla">
+                <div class="tabcontent" id="Tesla">
                     <h3>Tesla</h3>
                     <p></p>
                     <p></p>
@@ -116,7 +116,7 @@
                     </ul>
                 </div>
 
-                <div class="Deloitte">
+                <div class="tabcontent" id="Deloitte">
                     <h3>Deloitte Consulting</h3>
                     <p></p>
                     <p></p>
@@ -125,8 +125,8 @@
                     </ul>
                 </div>
 
-                <div class="Future">
-                    <h3>Thoughts on My Future</h3>
+                <div class="tabcontent" id="Future">
+                    <h3>Future Thoughts</h3>
                     <p></p>
                     <p></p>
                     <ul class="work-bullets">
